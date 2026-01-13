@@ -1,4 +1,29 @@
+import React from "react";
+import emailjs from "emailjs-com";
+
 function Contact() {
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      "service_8erbklj",       // Your Gmail Service ID
+      "template_p6rlydt",      // Your Template ID
+      e.target,
+      "5S22lE8YRnSMwe4YQ"      // Your Public Key / User ID
+    )
+    .then(
+      (result) => {
+        alert("Message sent successfully!"); // Success alert
+      },
+      (error) => {
+        console.error(error);
+        alert("Failed to send message. Try again!"); // Error alert
+      }
+    );
+
+    e.target.reset(); // Clears form after send
+  };
+
   return (
     <div className="max-w-5xl mx-auto px-4 py-20">
       
@@ -48,28 +73,31 @@ function Contact() {
         </div>
 
         {/* RIGHT – CONTACT FORM */}
-        <form className="space-y-5">
+        <form onSubmit={sendEmail} className="flex flex-col gap-4">
           <input
             type="text"
+            name="user_name"
             placeholder="Your Name"
-            className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+            className="border p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
-
           <input
             type="email"
+            name="user_email"
             placeholder="Your Email"
-            className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+            className="border p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
-
           <textarea
-            rows="5"
+            name="message"
+            rows="6"
             placeholder="Your Message"
-            className="w-full border rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+            className="border p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
           ></textarea>
-
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+            className="bg-blue-600 text-white py-3 rounded-md text-lg font-semibold hover:bg-blue-700 transition"
           >
             Send Message
           </button>

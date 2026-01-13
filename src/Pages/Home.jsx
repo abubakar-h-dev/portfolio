@@ -1,5 +1,5 @@
 import heroImage from "../Assets/profile.jpg"; // replace with your actual photo
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa"; // social icons
+import { FaGithub, FaLinkedin, FaGoogle   } from "react-icons/fa"; // social icons
 import { motion } from "framer-motion"; // optional for animations
 
 function Home() {
@@ -69,16 +69,20 @@ function Home() {
           className="flex gap-6 mt-6 md:mt-0 justify-center md:flex-col"
         >
           <div className="flex justify-center md:justify-start gap-6 mt-6 ">
-<a href="https://github.com/yourname" target="_blank" rel="noopener noreferrer"
+<a href="https://github.com/abubakar-h-dev" target="_blank" rel="noopener noreferrer"
    className="text-gray-700 hover:text-gray-900 text-2xl transition-transform duration-300 hover:scale-110">
   <FaGithub />
 </a>
-  <a href="https://linkedin.com/in/yourname" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-2xl transition-transform duration-300 hover:scale-110">
+  <a href="https://www.linkedin.com/in/mohamed-abubakar-h/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-2xl transition-transform duration-300 hover:scale-110">
     <FaLinkedin />
   </a>
-  <a href="https://twitter.com/yourname" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-600 text-2xl transition-transform duration-300 hover:scale-110">
-    <FaTwitter />
-  </a>
+  <a
+  href="mailto:mohamedabubakar10050@gmail.com"
+  className="text-red-500 hover:text-red-600 text-2xl transition-transform duration-300 hover:scale-110"
+  aria-label="Send Email">
+  <FaGoogle />
+</a>
+
 </div>
 
         </motion.div>

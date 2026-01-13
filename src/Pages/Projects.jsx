@@ -1,32 +1,33 @@
 import ProjectCard from "../Components/ProjectCard";
-import project1 from "../Assets/Netflix.png";
-import project2 from "../Assets/blogapp.png"
+import project1 from "../Assets/netfliz_land.jpg";
+import project2 from "../Assets/tailwind.png"
 import project3 from "../Assets/profile.jpg"
 
 function Projects() {
   const projects = [
     {
-      title: "E-Commerce App",
-      image: project1,
-      tech: "React, Node.js, MongoDB",
-      github: "https://github.com/yourname/ecommerce",
-      live: "https://your-ecommerce-live-link.com",
-    },
-    {
-      title: "Blog Application",
-      image: project2,
-      tech: "React, Express, MongoDB",
-      github: "https://github.com/yourname/blog-app",
-      live: "https://your-blog-live-link.com",
-    },
-    {
-      title: "Portfolio Website",
-      image: project3,
-      tech: "React, Tailwind CSS",
-      github: "https://github.com/yourname/portfolio",
-      live: "https://your-portfolio-live-link.com",
-    },
-  ];
+    title: "Portfolio Website",
+    image: project3, // project image import panna irukkanum
+    tech: "React, Tailwind CSS",
+    github: "https://github.com/abubakar-h-dev/portfolio",
+    live: "https://portfolio-five-snowy-74.vercel.app/",
+  },
+  {
+    title: "Netflix Clone",
+    image: project1,   // project image import panna irukkanum
+    tech: "React, Tailwind CSS",
+    github: "https://github.com/abubakar-h-dev/netflix-clone-react",
+    live: "https://netflix-clone-react-two.vercel.app/",
+  },
+  {
+    title: "Tailwind Clone",
+    image: project2,  // project image import panna irukkanum
+    tech: "React, Tailwind CSS",
+    github: "https://github.com/abubakar-h-dev/Tailwindcss",
+    live: "https://tailwindcss-clone.vercel.app/",
+  },
+];
+
 
   return (
     <div className="w-full py-16">

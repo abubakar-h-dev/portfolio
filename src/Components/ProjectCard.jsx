@@ -14,11 +14,10 @@ function ProjectCard({ title, image, tech, github, live }) {
       "
     >
       {/* IMAGE */}
-      <img
-        src={image}
-        alt={title}
-        className="w-full h-48 object-cover"
-      />
+      <div className="overflow-hidden rounded-xl shadow-sm">
+  <img src={image} alt={title} className="w-full h-auto max-h-60 object-contain" />
+</div>
+
 
       {/* CONTENT */}
       <div className="p-5">
